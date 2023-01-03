@@ -32,7 +32,7 @@
             this.pbMain = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.txtLog = new System.Windows.Forms.RichTextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.Score_label = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbMain)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,21 +60,22 @@
             this.txtLog.TabIndex = 1;
             this.txtLog.Text = "";
             // 
-            // label1
+            // Score_label
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(576, 8);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(99, 20);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Ваши очки: 0";
+            this.Score_label.AutoSize = true;
+            this.Score_label.Location = new System.Drawing.Point(576, 8);
+            this.Score_label.Name = "Score_label";
+            this.Score_label.Size = new System.Drawing.Size(99, 20);
+            this.Score_label.TabIndex = 2;
+            this.Score_label.Text = "Ваши очки: 0";
+            this.Score_label.Click += new System.EventHandler(this.label1_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 593);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.Score_label);
             this.Controls.Add(this.txtLog);
             this.Controls.Add(this.pbMain);
             this.Name = "Form1";
@@ -90,6 +91,6 @@
         private PictureBox pbMain;
         private System.Windows.Forms.Timer timer1;
         private RichTextBox txtLog;
-        private Label label1;
+        private Label Score_label;
     }
 }
