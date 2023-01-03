@@ -17,5 +17,18 @@ namespace lab5_2.Objects
             this.radius = radius;
             this.timer = timer;
         }
+
+        public override void Render(Graphics g)
+        {
+            g.FillEllipse(new SolidBrush(Color.SeaGreen), -radius / 2, -radius / 2, radius, radius);
+            g.DrawString(timer.ToString(), new Font("Verdana", 8), new SolidBrush(Color.Green), radius / 3, radius / 3);
+        }
+
+        public override GraphicsPath GetGraphicsPath()
+        {
+            var path = base.GetGraphicsPath();
+            path.AddEllipse(-radius / 2, -radius / 2, radius, radius);
+            return path;
+        }
     }
 }
